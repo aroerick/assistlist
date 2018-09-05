@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: '#0082B5',
     color: '#00ADCB',
-    padding: 2,
+    paddingHorizontal: 2,
+    paddingVertical: 1,
     fontSize: 16,
   },
 });
