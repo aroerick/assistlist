@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo';
 import SplashScreen from 'react-native-splash-screen';
 import createRootNavigator from './navigation/RootStackNavigation';
 import { getUser } from './config/models';
+// import addItem from '../js/screens/CreateItem'
 
 export default class App extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class App extends Component {
     return (
       <ApolloProvider client={client}>
         <Layout />
+        {/* <addItem /> */}
       </ApolloProvider>
     );
   }
