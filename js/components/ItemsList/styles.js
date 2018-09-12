@@ -23,20 +23,20 @@ const styles = StyleSheet.create({
   listItem: {
     borderBottomColor: colors.darkBlue,
     flexDirection: 'row',
-    borderBottomWidth: 0.5,
+    justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 10,
-    paddingHorizontal: width / 12,
+    maxHeight: height / 5,
   },
   listImage: {
     resizeMode: 'contain',
     alignSelf: 'stretch',
     flex: 0.35,
-    marginRight: width / 12,
+    marginLeft: width / 12,
   },
   listText: {
-    marginLeft: 10,
     flex: 1,
+    marginLeft: width / 7,
   },
   listTitle: {
     fontFamily: fonts.main,

@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from '../../components/SearchBar';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import ItemList from '../../components/ItemsList';
 import PropTypes from 'prop-types';
 import styles from './styles';
@@ -32,7 +32,6 @@ const Listings = ({ data, searchMethods, sortPriceState, toggleSort, navigation 
 Listings.propTypes = {
   data: PropTypes.array.isRequired,
   searchMethods: PropTypes.object.isRequired,
-  sortPriceState: PropTypes.bool.isRequired,
   toggleSort: PropTypes.func.isRequired,
 };
 
