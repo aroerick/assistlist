@@ -9,8 +9,10 @@ import { getUser } from '../../config/models';
 import UserContext from '../../context/UserContext';
 
 export default class MyListingsContainer extends Component {
-  static navigationOptions = { title: 'My Listings' };
-
+  static navigationOptions = {
+    title: 'My Listings',
+    headerLeft: <Back />,
+  };
   render() {
     return (
       <UserContext.Consumer>

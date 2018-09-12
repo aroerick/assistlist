@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import Listings from './Listings';
 import { ItemSearchContext } from '../../context/ItemsProvider';
-import { Text } from 'react-native';
 import LoadingIndicator from '../../components/LoadingIndicator';
+import { fonts, colors } from '../../config/styles';
+import { Dimensions, Image, Text } from 'react-native';
+import AssistListHeader from '../../components/AssistListHeader';
+
+const { height, width } = Dimensions.get('window');
 
 export default class ListingsContainer extends Component {
   constructor(props) {
@@ -19,9 +23,23 @@ export default class ListingsContainer extends Component {
     this.setState(prevState => ({
       priceState: !prevState.priceState,
     }));
+
+  static navigationOptions = {
+    headerTitle: <AssistListHeader />,
+    title: 'AssistList',
+    headerStyle: {
+      height: height / 11,
+      borderBottomWidth: 0.5,
+      borderBottomColor: colors.lightBlue,
+    },
+    headerTitleStyle: {
+      fontFamily: fonts.nunito,
+      color: colors.darkBlue,
+      fontSize: 25,
+      fontWeight: '900',
+    },
   };
 
-  static navigationOptions = { title: 'Listings' };
   render() {
     return (
       <ItemSearchContext.Consumer>
