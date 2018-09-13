@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Query, ApolloConsumer } from 'react-apollo';
-import gql from 'graphql-tag';
 import { GET_ITEMS } from '../config/queries';
 import { getUser } from '../config/models';
 
