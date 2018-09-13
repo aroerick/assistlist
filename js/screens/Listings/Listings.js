@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import SearchBar from '../../components/SearchBar';
 import ItemList from '../../components/ItemsList';
 import styles from './styles';
