@@ -110,6 +110,21 @@ export default class ItemsProvider extends Component {
     }
   };
 
+  filterByPrice = async order => {
+    if (order === 'asc') {
+      const items = [...this.state.items];
+      items.sort((a, b) => a.price - b.price);
+      this.setState({ items });
+    }
+    if (order === 'desc') {
+      const items = [...this.state.items];
+      items.sort((a, b) => b.price - a.price);
+      this.setState({ items });
+    }
+  };
+
+  // updatePostStatus = async () => {};
+
   render() {
     return (
       <ItemSearchContext.Provider

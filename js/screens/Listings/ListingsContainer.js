@@ -68,6 +68,8 @@ export default class ListingsContainer extends Component {
     ),
     title: 'Listings',
   };
+
+  static navigationOptions = { title: 'Listings' };
   render() {
     return (
       <ItemSearchContext.Consumer>
