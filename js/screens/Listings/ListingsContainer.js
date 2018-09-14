@@ -39,7 +39,21 @@ export default class ListingsContainer extends Component {
       fontWeight: '900',
     },
   };
+  constructor(props) {
+    super(props);
+    this.state = { priceState: false };
+  }
 
+  togglepriceState = filter => {
+    if (!this.state.priceState) {
+      filter('asc');
+    } else {
+      filter('desc');
+    }
+    this.setState(prevState => ({
+      priceState: !prevState.priceState,
+    }));
+  };
   render() {
     return (
       <ItemSearchContext.Consumer>
@@ -55,7 +69,6 @@ export default class ListingsContainer extends Component {
               }}
               toggleSort={filter => this.togglepriceState(filter)}
               sortPriceState={this.state.priceState}
-              navigation={this.props.navigation}
             />
           );
         }}

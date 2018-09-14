@@ -112,6 +112,8 @@ export default class ItemsProvider extends Component {
     }
   };
 
+  // updatePostStatus = async () => {};
+
   render() {
     return (
       <ItemSearchContext.Provider

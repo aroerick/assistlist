@@ -7,6 +7,7 @@ import { Mutation, Query } from 'react-apollo';
 import { ITEM_STATUS, USER_ITEMS } from '../../config/queries';
 import { getUser } from '../../config/models';
 import UserContext from '../../context/UserContext';
+import Back from '../../components/Back';
 
 export default class MyListingsContainer extends Component {
   static navigationOptions = {

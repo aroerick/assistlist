@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
   container: {
     height,
     backgroundColor: 'white',
+    flexGrow: 0.93,
+    width: width,
   },
   list: {
     backgroundColor: 'white',

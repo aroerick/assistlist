@@ -155,6 +155,15 @@ export const GET_SUBCATEGORIES = gql`
       items {
         title
       }
+      postStatus
+    }
+  }
+`;
+
+export const ITEM_STATUS = gql`
+  mutation($id: ID!, $date: DateTime) {
+    updateItem(id: $id, postStatus: $date) {
+      id
     }
   }
 `;
