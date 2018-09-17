@@ -13,8 +13,8 @@ import { Form, Field } from 'react-final-form';
 import moment from 'moment';
 import SelectInput from '../../components/SelectInput';
 import styles from './styles';
-const addImageIcon = require('../../assets/images/Icons/addImage.jpg');
 import PhotoUpload from 'react-native-photo-upload';
+const addImageIcon = require('../../assets/images/Icons/addImage.jpg');
 
 class CreateItem extends Component {
   constructor(props) {
@@ -24,7 +24,6 @@ class CreateItem extends Component {
       photos: [addImageIcon, addImageIcon, addImageIcon],
       subCategory: '',
       location: '',
-      loading: false,
     };
     this.child = React.createRef();
     this.child2 = React.createRef();

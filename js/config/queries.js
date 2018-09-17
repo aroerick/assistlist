@@ -139,6 +139,42 @@ export const GET_LOCATIONS = gql`
   }
 `;
 
+export const CREATE_ITEM = gql`
+  mutation(
+    $locationId: ID
+    $title: String!
+    $description: String
+    $images: [String!]!
+    $price: Int
+    $userId: ID
+    $postStatus: DateTime
+    $subCategoryId: ID
+  ) {
+    createItem(
+      locationId: $locationId
+      title: $title
+      description: $description
+      images: $images
+      price: $price
+      userId: $userId
+      postStatus: $postStatus
+      subCategoryId: $subCategoryId
+    ) {
+      title
+      id
+    }
+  }
+`;
+
+export const GET_LOCATIONS = gql`
+  query {
+    allLocations {
+      title
+      id
+    }
+  }
+`;
+
 export const ITEM_STATUS = gql`
   mutation($id: ID!, $date: DateTime) {
     updateItem(id: $id, postStatus: $date) {

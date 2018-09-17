@@ -29,6 +29,7 @@ export default class SelectInput extends Component {
     });
   }
 
+
   render() {
     return (
       <View>
@@ -41,10 +42,10 @@ export default class SelectInput extends Component {
           {this.state.showPicker ? (
             <View style={styles.iconRight} />
           ) : (
-            <View style={styles.iconPlay}>
-              <Icon name="play" size={18} color={styles.iconPlay.color} />
-            </View>
-          )}
+              <View style={styles.iconPlay}>
+                <Icon name="play" size={18} color={styles.iconPlay.color} />
+              </View>
+            )}
         </TouchableOpacity>
         <Modal
           visible={this.state.showPicker}
@@ -78,7 +79,7 @@ export default class SelectInput extends Component {
             </Picker>
           </View>
         </Modal>
-      </View>
+      </View >
     );
   }
 }
