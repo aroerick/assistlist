@@ -10,7 +10,7 @@ type User @model {
   email: String! @isUnique
   password: String!
   chats: [Chat!]! @relation(name: "UserChats")
-  profilePic: String
+  profilePic: [String!]
 }
 
 type Item @model {
