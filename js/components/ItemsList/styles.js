@@ -6,9 +6,13 @@ const styles = StyleSheet.create({
   container: {
     height,
     backgroundColor: 'white',
-    flexGrow: 0.93,
+  },
+  list: {
+    backgroundColor: 'white',
+    flexGrow: 0.7,
     width: width,
     paddingTop: 5,
+    overflow: 'visible',
   },
   list: {
     backgroundColor: 'white',

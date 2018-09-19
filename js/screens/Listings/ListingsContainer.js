@@ -85,6 +85,7 @@ export default class ListingsContainer extends Component {
               }}
               toggleSort={filter => this.togglepriceState(filter)}
               sortPriceState={this.state.priceState}
+              navigation={this.props.navigation}
             />
           );
         }}
