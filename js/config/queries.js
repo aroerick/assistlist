@@ -139,6 +139,24 @@ export const GET_LOCATIONS = gql`
   }
 `;
 
+export const GET_USER = gql`
+  query($id: ID!) {
+    allUsers(filter: { id: $id }) {
+      username
+      profilePic
+    }
+  }
+`;
+
+export const UPDATE_PROFILE_PIC = gql`
+  mutation($id: ID!, $pic: [String!]) {
+    updateUser(id: $id, profilePic: $pic) {
+      id
+      profilePic
+    }
+  }
+`;
+
 export const CREATE_ITEM = gql`
   mutation(
     $locationId: ID
