@@ -9,6 +9,7 @@ import { getUser } from '../../config/models';
 import UserContext from '../../context/UserContext';
 import Back from '../../components/Back';
 import UserContext from '../../context/UserContext';
+import Back from '../../components/Back';
 
 export default class MyListingsContainer extends Component {
   static navigationOptions = {

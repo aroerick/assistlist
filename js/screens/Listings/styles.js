@@ -7,6 +7,20 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     minHeight: height,
   },
+  header: {
+    flexDirection: 'row',
+  },
+  Logo: {
+    height: 25,
+    width: 25,
+    marginTop: 2,
+    marginRight: 5,
+  },
+  LogoText: {
+    fontFamily: fonts.nunito,
+    color: colors.darkBlue,
+    fontSize: 25,
+  },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -49,7 +63,7 @@ const styles = StyleSheet.create({
   },
   noItemsText: {
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: 25,
     fontFamily: fonts.main,
     color: colors.darkBlue,
   },

@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flexGrow: 0.93,
     width: width,
+    paddingTop: 5,
   },
   list: {
     backgroundColor: 'white',

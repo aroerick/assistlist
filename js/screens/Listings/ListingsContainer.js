@@ -3,10 +3,11 @@ import Listings from './Listings';
 import { ItemSearchContext } from '../../context/ItemsProvider';
 import LoadingIndicator from '../../components/LoadingIndicator';
 import { fonts, colors } from '../../config/styles';
-import { Dimensions, Image, Text } from 'react-native';
 import AssistListHeader from '../../components/AssistListHeader';
+import { Dimensions, Text, Image, View } from 'react-native';
+import styles from './styles';
 
-const { height, width } = Dimensions.get('window');
+const { height } = Dimensions.get('window');
 
 export default class ListingsContainer extends Component {
   constructor(props) {
@@ -53,6 +54,19 @@ export default class ListingsContainer extends Component {
     this.setState(prevState => ({
       priceState: !prevState.priceState,
     }));
+  };
+
+  static navigationOptions = {
+    headerTitle: (
+      <View style={styles.header}>
+        <Image
+          style={styles.Logo}
+          source={require('../../assets/images/Logo/Logo.png')}
+        />
+        <Text style={styles.LogoText}>AssistList</Text>
+      </View>
+    ),
+    title: 'Listings',
   };
   render() {
     return (
