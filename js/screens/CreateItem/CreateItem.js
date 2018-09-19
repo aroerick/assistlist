@@ -24,6 +24,7 @@ class CreateItem extends Component {
       photos: [addImageIcon, addImageIcon, addImageIcon],
       subCategory: '',
       location: '',
+      loading: false,
     };
     this.child = React.createRef();
     this.child2 = React.createRef();
@@ -45,7 +46,6 @@ class CreateItem extends Component {
   onClick = () => {
     this.child.current.clearInput();
     this.child2.current.clearInput();
-  };
 
   render() {
     return this.state.loading ? (
