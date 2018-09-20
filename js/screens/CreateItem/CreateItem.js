@@ -15,6 +15,7 @@ import SelectInput from '../../components/SelectInput';
 import styles from './styles';
 import PhotoUpload from 'react-native-photo-upload';
 const addImageIcon = require('../../assets/images/Icons/addImage.jpg');
+import PhotoUpload from 'react-native-photo-upload';
 
 class CreateItem extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class CreateItem extends Component {
 
   pickImage = (image, index) => {
     let photoArray = [...this.state.photos];
-    photoArray[index] = 'data:image/jpeg;base64,' + image;
+    photoArray[index] = image;
     this.setState({ photos: photoArray });
   };
   onClick = () => {
@@ -70,7 +71,7 @@ class CreateItem extends Component {
                       <View style={styles.defaultImageContainer}>
                         <Image
                           style={styles.selectedImage}
-                          source={{ uri: image }}
+                          source={{ uri: 'data:image/jpeg;base64,' + image }}
                         />
                       </View>
                     </View>
@@ -93,7 +94,7 @@ class CreateItem extends Component {
                 : parseInt(values.price);
 
               try {
-                const data = await this.props.createItem.mutation({
+                await this.props.createItem.mutation({
                   variables: {
                     userId: this.props.userId,
                     locationId: this.state.location,
@@ -105,9 +106,7 @@ class CreateItem extends Component {
                     images: this.state.photos,
                   },
                 });
-                console.log('data', data);
                 form.reset();
-                this.onClick();
                 this.setState({
                   photos: [addImageIcon, addImageIcon, addImageIcon],
                   loading: !this.state.loading,
