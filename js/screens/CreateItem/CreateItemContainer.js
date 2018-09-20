@@ -3,6 +3,7 @@ import CreateItem from './CreateItem';
 import ItemContainer from '../../containers/ItemContainer';
 import UserContext from '../../context/UserContext';
 import SubmissionModal from '../../components/SubmissionModal';
+import UserContext from '../../context/UserContext';
 
 export default class CreateItemContainer extends Component {
   static navigationOptions = {

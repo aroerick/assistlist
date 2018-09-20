@@ -93,7 +93,7 @@ class CreateItem extends Component {
                 : parseInt(values.price);
 
               try {
-                await this.props.createItem.mutation({
+                const data = await this.props.createItem.mutation({
                   variables: {
                     userId: this.props.userId,
                     locationId: this.state.location,
@@ -105,7 +105,9 @@ class CreateItem extends Component {
                     images: this.state.photos,
                   },
                 });
+                console.log('data', data);
                 form.reset();
+                this.onClick();
                 this.setState({
                   photos: [addImageIcon, addImageIcon, addImageIcon],
                   loading: !this.state.loading,
