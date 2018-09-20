@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
 import SearchBar from '../../components/SearchBar';
+import { View, Image, TouchableOpacity } from 'react-native';
 import ItemList from '../../components/ItemsList';
 import PropTypes from 'prop-types';
 import styles from './styles';

@@ -3,6 +3,7 @@ import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { removeUser } from '../../config/models';
 import styles from './styles';
 import PhotoUpload from 'react-native-photo-upload';
+import PropTypes from 'prop-types';
 
 const Profile = ({ navigation, user, updateUser, userID }) => {
   const img =
@@ -74,4 +75,9 @@ const Profile = ({ navigation, user, updateUser, userID }) => {
     </View>
   );
 };
+
+Profile.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
+
 export default Profile;
