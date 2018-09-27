@@ -101,7 +101,7 @@ When your listing ranking drops you can hit refresh in My listings to bump it up
   );
 };
 Onboarding.propTypes = {
-  navigation: PropTypes.object.isRequired,
+  navigation: PropTypes.object,
 };
 
 export default OnBoarding;

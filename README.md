@@ -26,10 +26,13 @@ By:
 
 Clone or download the project, commands must be run in the project directory
 
-`yarn install`
+>yarn  
+>cd node_modules/react-apollo  
+>yarn  
+>yarn compile   
 
 #### To Run
-
+In root directory
 `react-native run-ios`
 
 ## Screenshots

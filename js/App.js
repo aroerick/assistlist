@@ -6,6 +6,7 @@ import createRootNavigator from './navigation/RootStackNavigation';
 import { getUser } from './config/models';
 import { UserProvider } from './context/UserContext';
 import ItemsProvider from './context/ItemsProvider';
+import { UserProvider } from './context/UserContext'
 
 export default class App extends Component {
   constructor(props) {
@@ -22,7 +23,6 @@ export default class App extends Component {
   }
 
   render() {
-    // console.disableYellowBox = true,
     const Layout = createRootNavigator(this.state.signedIn);
     return (
       <ApolloProvider client={client}>

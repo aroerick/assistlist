@@ -205,7 +205,6 @@ export const GET_SUBCATEGORIES = gql`
       items {
         title
       }
-      postStatus
     }
   }
 `;

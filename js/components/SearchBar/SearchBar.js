@@ -55,7 +55,7 @@ export default class SearchBar extends Component {
           onTouchStart={this.showOverlay.bind(this)}
           style={styles.searchInput}
           onChangeText={text =>
-            console.log(text) && !this.showOverlay.bind(this)
+            !this.showOverlay.bind(this)
           }
           placeholder={'Enter a Keyword or Location'}
           placeholderTextColor="#0082B566"

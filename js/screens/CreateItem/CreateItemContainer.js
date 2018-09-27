@@ -4,7 +4,6 @@ import ItemContainer from '../../containers/ItemContainer';
 import UserContext from '../../context/UserContext';
 import SubmissionModal from '../../components/SubmissionModal';
 import UserContext from '../../context/UserContext';
-
 export default class CreateItemContainer extends Component {
   static navigationOptions = {
     title: 'Create Item',
@@ -23,6 +22,7 @@ export default class CreateItemContainer extends Component {
     },
   ];
   render() {
+    console.log(this.props.navigation.getParam('catId'))
     return (
       <UserContext.Consumer>
         {values => {
