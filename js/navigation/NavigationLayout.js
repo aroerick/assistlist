@@ -66,30 +66,13 @@ const listingsStack = createStackNavigator(
     }),
   }
 );
-const messagesStack = createStackNavigator({
-  Messages: {
-    screen: Messages,
-  },
-  Chat: {
-    screen: Chat,
-  },
-});
-const profileStack = createStackNavigator(
-  {
-    Profile: {
-      screen: Profile,
-    },
-  },
-  {
-    navigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation),
-    }),
-  }
-);
 const messagesStack = createStackNavigator(
   {
     Messages: {
       screen: Messages,
+    },
+    Chat: {
+      screen: Chat,
     },
   },
   {

@@ -210,14 +210,6 @@ export const GET_SUBCATEGORIES = gql`
   }
 `;
 
-export const ITEM_STATUS = gql`
-  mutation($id: ID!, $date: DateTime) {
-    updateItem(id: $id, postStatus: $date) {
-      id
-    }
-  }
-`;
-
 export const MESSAGES_SUBSCRIPTION = gql`
   subscription newMessage($chatId: ID!) {
     Message(
