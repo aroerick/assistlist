@@ -10,21 +10,6 @@ import styles from './styles';
 const { height } = Dimensions.get('window');
 
 export default class ListingsContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { priceState: false };
-  }
-
-  togglepriceState = filter => {
-    if (!this.state.priceState) {
-      filter('asc');
-    } else {
-      filter('desc');
-    }
-    this.setState(prevState => ({
-      priceState: !prevState.priceState,
-    }));
-
   static navigationOptions = {
     headerTitle: <AssistListHeader />,
     title: 'AssistList',
@@ -56,20 +41,6 @@ export default class ListingsContainer extends Component {
     }));
   };
 
-  static navigationOptions = {
-    headerTitle: (
-      <View style={styles.header}>
-        <Image
-          style={styles.Logo}
-          source={require('../../assets/images/Logo/Logo.png')}
-        />
-        <Text style={styles.LogoText}>AssistList</Text>
-      </View>
-    ),
-    title: 'Listings',
-  };
-
-  static navigationOptions = { title: 'Listings' };
   render() {
     return (
       <ItemSearchContext.Consumer>

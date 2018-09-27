@@ -4,7 +4,6 @@ import { removeUser } from '../../config/models';
 import styles from './styles';
 import PhotoUpload from 'react-native-photo-upload';
 import PropTypes from 'prop-types';
-import PhotoUpload from 'react-native-photo-upload';
 
 const Profile = ({ navigation, user, updateUser, userID }) => {
   const img =

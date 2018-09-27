@@ -187,11 +187,9 @@ export const CREATE_ITEM = gql`
     }
   }
 `;
-
-export const GET_LOCATIONS = gql`
-  query {
-    allLocations {
-      title
+export const ITEM_STATUS = gql`
+  mutation($id: ID!, $date: DateTime) {
+    updateItem(id: $id, postStatus: $date) {
       id
     }
   }

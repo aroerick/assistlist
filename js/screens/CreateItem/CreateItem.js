@@ -12,7 +12,7 @@ import { Form, Field } from 'react-final-form';
 import moment from 'moment';
 import SelectInput from '../../components/SelectInput';
 import styles from './styles';
-import LoadingIndicator from '../../components/LoadingIndicator'
+import LoadingIndicator from '../../components/LoadingIndicator';
 import PhotoUpload from 'react-native-photo-upload';
 const addImageIcon = require('../../assets/images/Icons/addImage.jpg');
 
@@ -46,7 +46,7 @@ class CreateItem extends Component {
   onClick = () => {
     this.child.current.clearInput();
     this.child2.current.clearInput();
-
+  };
   render() {
     return this.state.loading ? (
       <LoadingIndicator />

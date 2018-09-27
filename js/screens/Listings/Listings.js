@@ -4,7 +4,6 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import ItemList from '../../components/ItemsList';
 import PropTypes from 'prop-types';
 import styles from './styles';
-import PropTypes from 'prop-types';
 
 const Listings = ({ data, searchMethods, sortPriceState, toggleSort, navigation }) => {
   return (
