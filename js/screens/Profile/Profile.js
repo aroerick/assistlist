@@ -8,7 +8,7 @@ import PhotoUpload from 'react-native-photo-upload';
 
 const Profile = ({ navigation, user, updateUser, userID }) => {
   const img =
-    user[0].profilePic.length > 0
+    user[0].profilePic && user[0].profilePic.length > 0
       ? {
           uri: 'data:image/jpeg;base64,' + user[0].profilePic[0],
         }

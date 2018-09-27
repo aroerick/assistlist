@@ -11,25 +11,25 @@ class UserProvider extends Component {
     };
   }
 
-  addUser = () => {
+  addUser = async () => {
     try {
-      addUser();
-      this.getCurrentUser();
+      await addUser();
+      await this.getCurrentUser();
     } catch (error) {
       console.log(error);
     }
   };
-  removeCurrentUser = () => {
+  removeCurrentUser = async () => {
     try {
-      removeUser();
+      await removeUser();
     } catch (error) {
       console.log(error);
     }
   };
-  getCurrentUser = () => {
+  getCurrentUser = async () => {
     try {
       let currentUser;
-      getUser().map(user => currentUser = user)
+      await getUser().map(user => currentUser = user)
       this.setState({ currentUser })
     } catch (error) {
       console.log(error);

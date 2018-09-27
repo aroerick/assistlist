@@ -22,8 +22,7 @@ export default class SingleListingContainer extends Component {
                   <Mutation
                     mutation={CREATE_CHAT}
                     onCompleted={(data, loading) => {
-                      if (loading) return <LoadingIndicator />;
-                      data &&
+                      // if (loading) return <LoadingIndicator />;
                         this.props.navigation.navigate('Chat', {
                           chatId: data.createChat.id,
                           item: Item,

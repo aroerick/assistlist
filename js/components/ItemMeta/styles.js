@@ -37,6 +37,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     fontFamily: fonts.main,
   },
+  priceFree: {
+    color: colors.green,
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: fonts.main,
+  },
   locationContainer: {
     flexDirection: 'row',
     justifyContent: 'center',

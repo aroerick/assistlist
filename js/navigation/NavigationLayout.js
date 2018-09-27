@@ -19,7 +19,6 @@ import CommunityPartners from './../screens/CommunityPartners';
 import AboutUs from './../screens/AboutUs';
 import CreateItemNav from '../components/CreateItemNav/CreateItemNav';
 import { sharedNavigationOptions } from './config';
-import SingleListing from './../screens/SingleListing';
 import Chat from './../screens/Chat';
 
 export const authStack = createStackNavigator(

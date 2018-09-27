@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
     padding: 10,
     marginHorizontal: 30,
     marginVertical: 8,
-    backgroundColor: colors.lightBlue,
   },
   messageText: {
     fontFamily: fonts.main,
@@ -33,15 +32,17 @@ const styles = StyleSheet.create({
   },
   fromMe: {
     alignSelf: 'flex-end',
+    backgroundColor: colors.darkBlue,
   },
   fromMeIcon: {
-    color: colors.lightBlue,
+    color: colors.darkBlue,
     position: 'absolute',
     right: 0,
     bottom: -20,
   },
   fromYou: {
     alignSelf: 'flex-start',
+    backgroundColor: colors.lightBlue,
   },
   fromYouIcon: {
     color: colors.lightBlue,

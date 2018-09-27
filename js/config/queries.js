@@ -37,6 +37,7 @@ export const USER_CHATS = gql`
         id
         createdAt
         price
+        images
         location {
           title
         }
@@ -94,6 +95,7 @@ export const GET_ITEM = gql`
       title
       id
       price
+      description
       subCategory {
         title
       }
@@ -212,26 +214,6 @@ export const ITEM_STATUS = gql`
   mutation($id: ID!, $date: DateTime) {
     updateItem(id: $id, postStatus: $date) {
       id
-    }
-  }
-`;
-
-export const GET_ITEM = gql`
-  query GetItem($id: ID!) {
-    Item(id: $id) {
-      title
-      id
-      price
-      subCategory {
-        title
-      }
-      location {
-        title
-      }
-      user {
-        username
-        id
-      }
     }
   }
 `;

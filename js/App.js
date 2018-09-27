@@ -15,7 +15,6 @@ export default class App extends Component {
       signedIn: false,
     };
   }
-
   componentDidMount() {
     SplashScreen.hide();
     let currentUser = false;
@@ -24,6 +23,7 @@ export default class App extends Component {
   }
 
   render() {
+    // console.disableYellowBox = true,
     const Layout = createRootNavigator(this.state.signedIn);
     return (
       <ApolloProvider client={client}>

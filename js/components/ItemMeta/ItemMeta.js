@@ -42,7 +42,11 @@ const ItemMeta = ({ itemData }) => {
       <Text style={styles.title}>{capitalizeFirstLetter(itemData.title)}</Text>
       <Text style={styles.title}>{itemData.subCategory.title}</Text>
       <View style={styles.priceLocationContainer}>
-        <Text style={styles.price}>${itemData.price}</Text>
+        {itemData.price === 0 ? (
+                <Text style={styles.priceFree}>Free</Text>
+              ) : (
+                <Text style={styles.price}>${itemData.price}</Text>
+              )}
         <View style={styles.locationContainer}>
           <Image
             style={styles.locationIcon}

@@ -7,15 +7,14 @@ import {
   TouchableOpacity,
   Switch,
   Image,
-  ActivityIndicator,
 } from 'react-native';
 import { Form, Field } from 'react-final-form';
 import moment from 'moment';
 import SelectInput from '../../components/SelectInput';
 import styles from './styles';
+import LoadingIndicator from '../../components/LoadingIndicator'
 import PhotoUpload from 'react-native-photo-upload';
 const addImageIcon = require('../../assets/images/Icons/addImage.jpg');
-import PhotoUpload from 'react-native-photo-upload';
 
 class CreateItem extends Component {
   constructor(props) {
@@ -50,7 +49,7 @@ class CreateItem extends Component {
 
   render() {
     return this.state.loading ? (
-      <ActivityIndicator size="large" />
+      <LoadingIndicator />
     ) : (
       <ScrollView style={styles.container}>
         <View style={styles.miniContainer}>

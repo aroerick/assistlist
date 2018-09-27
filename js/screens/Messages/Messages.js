@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
 import SafetyTips from '../../components/SafetyTips';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import styles from './styles';
 
 class Messages extends Component {
@@ -15,6 +15,10 @@ class Messages extends Component {
     return (
       <ScrollView style={styles.container}>
         {this.props.data.map(chat => {
+          const image =
+            chat.item.images.length > 0
+              ? chat.item.images[0]
+              : 'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/wheelchair-512.png';
           return (
             <TouchableOpacity
               onPress={() =>
@@ -29,8 +33,7 @@ class Messages extends Component {
               <Image
                 style={styles.listImage}
                 source={{
-                  uri:
-                    'https://cdn2.iconfinder.com/data/icons/font-awesome/1792/wheelchair-512.png',
+                  uri: image,
                 }}
               />
               <View style={styles.textArea}>
@@ -54,6 +57,6 @@ class Messages extends Component {
 Messages.propTypes = {
   data: PropTypes.array.isRequired,
   navigation: PropTypes.object.isRequired,
-}
+};
 
-export default Messages
+export default Messages;

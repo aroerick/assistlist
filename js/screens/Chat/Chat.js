@@ -11,6 +11,7 @@ import styles from './styles';
 import PropTypes from 'prop-types'
 
 const ChatBox = ({ messages, currentUser, item }) => {
+  console.log(item)
   return (
     <KeyboardAvoidingView
       behavior="position"
